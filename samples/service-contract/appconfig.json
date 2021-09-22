@@ -3,5 +3,7 @@
   "provider": "SAP FSM",
   "description": "Sample extension to demo data fetch using a frontend only architecture",   
   "version": "1.0.0", 
-  "icon": "https://raw.githubusercontent.com/SAP-samples/fsm-extension-sample/refactor/samples/service-contract/icon.png"
+  "icon": "https://raw.githubusercontent.com/SAP-samples/fsm-extension-sample/refactor/samples/service-contract/icon.png",
+  "optimalHeight": "141px",
+  "outletPositions": ["MDM_EQUIPMENT_DETAIL_PAGE_BOTTOM"]
 }
