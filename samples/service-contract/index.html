@@ -9,6 +9,8 @@
   <body>
     <div class="equipment-outlet">
       <h2 class="fd-title fd-title--h2" id="info">Equipment outlet extension working!!</h2>
+      <p id="selectedEquipmentId"></p>
+      <p id="selectedExternalId"></p>
     </div>
     <script src="https://unpkg.com/fsm-shell"></script>
     <script src="helpers.js"></script>
@@ -31,6 +33,16 @@
             response_type: 'token'  // request a user token within the context
           }
         });
+        
+        // Listen to name value
+      shellSdk.onViewState('selectedEquipmentId', (selectedEquipmentId) => {
+        document.getElementById('selectedEquipmentId').innerText = selectedEquipmentId ? `Equipment ID: ${selectedEquipmentId}` : ``;
+      });
+      
+      // Listen to selectedExternalId value
+      shellSdk.onViewState('selectedExternalId', (selectedExternalId) => {
+        document.getElementById('selectedExternalId').innerText = selectedExternalId ? `External ID: ${selectedExternalId}` : ``;
+      });
 
         // Callback on fsm context response
         shellSdk.on(SHELL_EVENTS.Version1.REQUIRE_CONTEXT, (event) => {
