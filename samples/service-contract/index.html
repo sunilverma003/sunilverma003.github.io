@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="equipment-outlet">
-      <h2 class="fd-title fd-title--h2" id="info">Equipment outlet extension working!!</h2>
+      <h2 class="fd-title fd-title--h2" id="info">MDM equipment outlet extension!</h2>
       <p id="selectedEquipmentId"></p>
       <p id="selectedExternalId"></p>
     </div>
@@ -18,7 +18,6 @@
       // Import ShellSDK and events list from FSMShell global variable
       // see https://github.com/SAP/fsm-shell for more details.
       const { ShellSdk, SHELL_EVENTS } = FSMShell;
-      console.log('extension outside 1');
       // Display an error message if extension does not run within shell
       if (!ShellSdk.isInsideShell()) {
         updateUI('Unable to reach shell eventAPI');
@@ -33,19 +32,17 @@
             response_type: 'token'  // request a user token within the context
           }
         });
-        
-         console.log('extension outside 2');
-        
-        // Listen to name value
+                
+        // Listen to selectedEquipmentId value
       shellSdk.onViewState('selectedEquipmentId', (selectedEquipmentId) => {
         console.log('extension selectedEquipmentId', selectedEquipmentId);
-        document.getElementById('selectedEquipmentId').innerText = selectedEquipmentId ? `Equipment ID: ${selectedEquipmentId}` : ``;
+        document.getElementById('selectedEquipmentId').innerText = selectedEquipmentId ? `Equipment ID: ${selectedEquipmentId}` : `Equipment ID: null`;
       });
       
       // Listen to selectedExternalId value
       shellSdk.onViewState('selectedExternalId', (selectedExternalId) => {
         console.log('extension selectedExternalId', selectedExternalId);
-        document.getElementById('selectedExternalId').innerText = selectedExternalId ? `External ID: ${selectedExternalId}` : ``;
+        document.getElementById('selectedExternalId').innerText = selectedExternalId ? `External ID: ${selectedExternalId}` : `External ID: null`;
       });
 
         // Callback on fsm context response
