@@ -7,9 +7,9 @@
     <link href="styles.css" rel="stylesheet">
   </head>
   <body>
-    <div class="equipment-outlet">
-      <h2 class="fd-title fd-title--h2" id="info">MDM Equipment Outlet Sample Plugin!</h2>
-      <p id="selectedEquipmentId"></p>
+    <div class="business-partner-outlet">
+      <h2 class="fd-title fd-title--h2" id="info">MDM Business Partner Outlet Sample Plugin!</h2>
+      <p id="selectedBusinessPartnerId"></p>
       <p id="selectedExternalId"></p>
     </div>
     <script src="https://unpkg.com/fsm-shell"></script>
@@ -33,15 +33,13 @@
           }
         });
                 
-        // Listen to selectedEquipmentId value
-      shellSdk.onViewState('selectedEquipmentId', (selectedEquipmentId) => {
-        console.log('extension selectedEquipmentId', selectedEquipmentId);
-        document.getElementById('selectedEquipmentId').innerText = selectedEquipmentId ? `Equipment ID: ${selectedEquipmentId}` : `Equipment ID: null`;
+        // Listen to selectedBusinessPartnerId value
+      shellSdk.onViewState('selectedBusinessPartnerId', (selectedBusinessPartnerId) => {
+        document.getElementById('selectedBusinessPartnerId').innerText = selectedBusinessPartnerId ? `Business Partner ID: ${selectedBusinessPartnerId}` : `Business Partner ID: null`;
       });
       
       // Listen to selectedExternalId value
       shellSdk.onViewState('selectedExternalId', (selectedExternalId) => {
-        console.log('extension selectedExternalId', selectedExternalId);
         document.getElementById('selectedExternalId').innerText = selectedExternalId ? `External ID: ${selectedExternalId}` : `External ID: null`;
       });
 
