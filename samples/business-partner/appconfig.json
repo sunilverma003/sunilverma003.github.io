@@ -1,9 +1,9 @@
 {
-  "name": "MDM Equipment",
+  "name": "MDM Business Partner",
   "provider": "SAP FSM",
   "description": "Sample extension to demo data fetch using a frontend only architecture",   
   "version": "1.0.0", 
   "icon": "https://raw.githubusercontent.com/SAP-samples/fsm-extension-sample/refactor/samples/service-contract/icon.png",
   "optimalHeight": "250px",
-  "outletPositions": ["MDM_EQUIPMENT_DETAIL_PAGE_BOTTOM"]
+  "outletPositions": ["MDM_BUSINESS_PARTNER_DETAIL_PAGE_BOTTOM"]
 }
