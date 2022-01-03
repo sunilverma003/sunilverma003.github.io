@@ -1,7 +1,7 @@
-# Service contract extension sample
+# Business Partner extension sample
 
-Service contract extension is a minimalist sample of a front-end extension fetching the data API using the authentication mechanism. 
-It is designed to run within the [dispatching board](https://help.sap.com/viewer/fsm_extensions/Cloud/en-US/dispatching-board.html).
+Business Partner extension is a minimalist sample of a front-end extension fetching the data API using the authentication mechanism. 
+It is designed to run within the [master data](https://help.sap.com/viewer/fsm_extensions/Cloud/en-US/dispatching-board.html).
 
 ## How to run
 
