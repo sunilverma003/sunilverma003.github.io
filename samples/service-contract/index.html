@@ -34,14 +34,12 @@
         });
                 
         // Listen to selectedEquipmentId value
-      shellSdk.onViewState('selectedEquipmentId', (selectedEquipmentId) => {
-        console.log('extension selectedEquipmentId', selectedEquipmentId);
+      shellSdk.onViewState('selectedId', (selectedEquipmentId) => {
         document.getElementById('selectedEquipmentId').innerText = selectedEquipmentId ? `Equipment ID: ${selectedEquipmentId}` : `Equipment ID: null`;
       });
       
       // Listen to selectedExternalId value
       shellSdk.onViewState('selectedExternalId', (selectedExternalId) => {
-        console.log('extension selectedExternalId', selectedExternalId);
         document.getElementById('selectedExternalId').innerText = selectedExternalId ? `External ID: ${selectedExternalId}` : `External ID: null`;
       });
 
