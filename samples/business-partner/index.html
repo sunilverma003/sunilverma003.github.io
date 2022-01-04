@@ -34,7 +34,7 @@
         });
                 
         // Listen to selectedBusinessPartnerId value
-      shellSdk.onViewState('selectedBusinessPartnerId', (selectedBusinessPartnerId) => {
+      shellSdk.onViewState('selectedId', (selectedBusinessPartnerId) => {
         document.getElementById('selectedBusinessPartnerId').innerText = selectedBusinessPartnerId ? `Business Partner ID: ${selectedBusinessPartnerId}` : `Business Partner ID: null`;
       });
       
